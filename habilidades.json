@@ -1,0 +1,62 @@
+
+[{
+    "id": 1,
+    "nombre": "HTML5",
+    "icono": "fab fa-html5",
+    "nivel": "75"
+},
+{
+    "id": 2,
+    "nombre": "CSS3",
+    "icono": "fab fa-css3-alt",
+    "nivel": "75"
+},
+{
+    "id": 3,
+    "nombre": "Javascript",
+    "icono": "fab fa-js",
+    "nivel": "25"
+},
+{
+    "id": 4,
+    "nombre": "Angular",
+    "icono": "fab fa-angular",
+    "nivel": "10"
+},
+{
+    "id": 5,
+    "nombre": "Database",
+    "icono": "fas fa-database",
+    "nivel": "50"
+},
+{
+    "id": 6,
+    "nombre": "MySql",
+    "icono": "flaticon-mysql",
+    "nivel": "50"
+},
+{
+    "id": 7,
+    "nombre": "PHP",
+    "icono": "fab fa-php",
+    "nivel": "10"
+},
+{
+    "id": 8,
+    "nombre": "Responsive Design",
+    "icono": "fas fa-mobile-alt",
+    "nivel": "75"
+},
+{
+    "id": 9,
+    "nombre": "Sass",
+    "icono": "fab fa-sass",
+    "nivel": "50"
+},
+{
+    "id": 10,
+    "nombre": "Gulp",
+    "icono": "fab fa-gulp",
+    "nivel": "25"
+}
+]
