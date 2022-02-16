@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?fbe81ca4d03d65188875667dac5d2165") format("truetype"),
+url("./flaticon.woff?fbe81ca4d03d65188875667dac5d2165") format("woff"),
+url("./flaticon.woff2?fbe81ca4d03d65188875667dac5d2165") format("woff2"),
+url("./flaticon.eot?fbe81ca4d03d65188875667dac5d2165#iefix") format("embedded-opentype"),
+url("./flaticon.svg?fbe81ca4d03d65188875667dac5d2165#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "mysql": "\f101",
+    "muscles": "\f102",
+    "browser": "\f103",
+    "profile-user": "\f104",
+    "letter": "\f105",
+    "idea": "\f106",
+);
+
+.flaticon-mysql:before {
+    content: map-get($flaticon-map, "mysql");
+}
+.flaticon-muscles:before {
+    content: map-get($flaticon-map, "muscles");
+}
+.flaticon-browser:before {
+    content: map-get($flaticon-map, "browser");
+}
+.flaticon-profile-user:before {
+    content: map-get($flaticon-map, "profile-user");
+}
+.flaticon-letter:before {
+    content: map-get($flaticon-map, "letter");
+}
+.flaticon-idea:before {
+    content: map-get($flaticon-map, "idea");
+}

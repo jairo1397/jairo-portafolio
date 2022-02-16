@@ -1,0 +1,14 @@
+//base
+@import "base/variables";
+@import "base/globales";
+@import "base/normalize";
+@import "base/mixins";
+
+//layouts
+@import "layout/loader";
+@import "layout/navbar";
+@import "layout/inicio";
+@import "layout/about";
+@import "layout/habilidades";
+@import "layout/proyectos";
+@import "layout/contacto";

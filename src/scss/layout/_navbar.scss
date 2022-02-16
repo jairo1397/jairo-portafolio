@@ -1,0 +1,155 @@
+/* -----------------------------
+ ------------navbar------------
+ ----------------------------- */
+
+#nav-container {
+  z-index: 500;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  .bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    background: #000;
+  }
+  .button {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 200;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 70px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    .icon-bar {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: #aaa;
+      transition: 0.3s;
+    }
+    .icon-bar + .icon-bar {
+      margin-top: 5px;
+    }
+  }
+  #nav-content {
+    padding: 40px;
+    width: 300px;
+    position: absolute;
+    height: 100vh;
+    background: #22637b;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: $black;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    will-change: transform;
+    contain: paint;
+    @include telefono-pequeño {
+      width: 230px;
+    }
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      a {
+        margin-top: 20px;
+        padding: 10px 5px;
+        font-size: 1.5rem;
+        display: block;
+        text-transform: uppercase;
+        transition: color 0.1s;
+        color: $white;
+        @include telefono-pequeño {
+          font-size: 1rem;
+        }
+        &:hover {
+          color: $coral;
+        }
+      }
+    }
+    .small {
+      position: absolute;
+      bottom: 3%;
+      display: flex;
+      align-self: center;
+
+      a {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+      }
+    }
+    .small a + a {
+      margin-left: 15px;
+    }
+  }
+  a,
+  a:visited,
+  a:focus,
+  a:active,
+  a:link {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  a {
+    color: currentColor;
+    transition: 0.2s ease-in-out;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+#nav-container:focus-within .bg {
+  visibility: visible;
+  opacity: 0.6;
+}
+
+#nav-container * {
+  visibility: visible;
+}
+
+#nav-container:focus-within .button {
+  pointer-events: none;
+}
+#nav-container:focus-within .icon-bar:nth-of-type(1) {
+  transform: translate3d(300px, 8px, 0) rotate(45deg);
+  @include telefono-pequeño {
+    transform: translate3d(210px, 8px, 0) rotate(45deg);
+  }
+}
+#nav-container:focus-within .icon-bar:nth-of-type(2) {
+  transform: translate3d(300px, 0, 0);
+  @include telefono-pequeño {
+    transform: translate3d(210px, 0, 0);
+  }
+  opacity: 0;
+}
+#nav-container:focus-within .icon-bar:nth-of-type(3) {
+  transform: translate3d(300px, -8px, 0) rotate(-45deg);
+  @include telefono-pequeño {
+    transform: translate3d(210px, -8px, 0) rotate(-45deg);
+  }
+}
+
+#nav-container:focus-within #nav-content {
+  transform: none;
+}

@@ -1,0 +1,130 @@
+/* -----------------------------
+ --------Seccion habilidades--------
+ ----------------------------- */
+#habilidades {
+  // border: $marco;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  align-items: center;
+
+  h3 {
+    margin-top: 10px;
+    color: white;
+    font-size: 2.5rem;
+
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  .skills-barra {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .contenedor-conocimientos {
+    // border: $marco;
+    color: white;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    @include tablet {
+      width: 100%;
+      height: 80%;
+    }
+    article {
+      // border: $marco;
+      width: 25%;
+      height: 25%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      @include telefono {
+        width: 32%;
+      }
+      i {
+        transition: all 0.4s;
+        height: 50%;
+        font-size: 6em;
+        @include telefono {
+          font-size: 2em;
+        }
+        &:hover {
+          cursor: pointer;
+          color: coral;
+          transform: scale(1.25);
+        }
+      }
+      span {
+        font-size: 1.5em;
+        @include telefono {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  .contenedor-barra {
+    // border: $marco;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    @include tablet {
+      width: 100%;
+    }
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+      @include tablet {
+        font-size: 0.8rem;
+      }
+    }
+    .contenedor-nivel {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: stretch;
+      @include tablet {
+        font-size: 0.8rem;
+      }
+    }
+
+    .progress-container {
+      height: 0.5rem;
+      width: 25rem;
+      border-radius: 0.4rem;
+      background: #000;
+      @include tablet {
+        width: 100%;
+      }
+      .progress {
+        height: 100%;
+        width: 0%;
+        border-radius: 0.4rem;
+        background: #ff4754;
+        transition: width 0.4s ease;
+      }
+    }
+  }
+}
